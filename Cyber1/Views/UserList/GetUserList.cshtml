@@ -1,0 +1,29 @@
+﻿@using Cyber1.Areas.Identity.Data
+@model IEnumerable<ApplicationUser>;
+
+@if(User.IsInRole("Admin"))
+{
+    <a asp-action="Create" asp-controller="UserCrud" class="btn btn-primary create_button">Dodaj użytkownika</a>
+}
+
+@foreach (var user in Model)
+{
+    <div class="card mb-3">
+        <div class="card-header">
+            User Id : @user.Id
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Username: @user.UserName</h5>
+            <h5 class="card-title">Firstname: @user.FirstName</h5>
+            <h5 class="card-title">Lastname: @user.LastName</h5>
+        </div>
+        <div class="card-footer">
+            <a asp-action="EditUser" asp-controller="Administration" asp-route-id="@user.Id" class="btn btn-primary edit_button">Edytuj</a>
+            <a asp-action="ChangePassword" asp-controller="User" asp-route-id="@user.Id" class="btn btn-primary edit_button">Zmień Hasło</a>
+
+            <form method="post" asp-action="DeleteUser" asp-controller="Administration" asp-route-id="@user.Id">
+                <button type="submit" class="btn btn-danger del_button">Usuń użytkownika</button>
+            </form>
+        </div>
+    </div>
+}

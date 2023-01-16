@@ -1,0 +1,77 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.card-header {
+    background-color: darkblue;
+    color: white;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.create_button {
+    margin-left: 80%;
+    background-color: green;
+    border: 3px solid white;
+    width: 200px;
+}
+
+.create_button:hover {
+    color: green;
+    background-color: white;
+    border: 3px solid green;
+}
+
+.edit_button {
+    background-color: darkorange;
+    border: 3px solid white;
+    width: 200px;
+}
+
+.edit_button:hover {
+    color: darkorange;
+    background-color: white;
+    border: 3px solid darkorange;
+}
+
+.del_button {
+    background-color: darkred;
+    border: 3px solid white;
+    width: 200px;
+}
+
+.del_button:hover {
+    color: darkred;
+    background-color: white;
+    border: 3px solid darkred;
+}
+
+.log_table {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#x1 {
+    width: 50px;
+    height: 20px;
+}
